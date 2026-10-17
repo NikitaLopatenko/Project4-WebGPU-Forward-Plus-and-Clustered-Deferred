@@ -30,7 +30,12 @@ export const constants = {
 
     moveLightsWorkgroupSize: 128,
 
-    lightRadius: 2
+    lightRadius: 2,
+
+
+    clusterCountWidth: 16,
+    clusterCountHeight: 12,
+    clusterCountDepth: 10,
 };
 
 // =================================
