@@ -105,7 +105,7 @@ export class Lights {
 
         
         const cellCount = shaders.constants.clusterCountWidth * shaders.constants.clusterCountHeight * shaders.constants.clusterCountDepth;
-        const bytesPerCell = 4 + 128 * 4; // beacause numLights + 128 light numbers
+        const bytesPerCell = 4 + 512 * 4; // beacause numLights + 128 light numbers
 
         this.cellsBuffer = device.createBuffer({
             label: "clusters",

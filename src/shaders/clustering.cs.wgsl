@@ -33,7 +33,7 @@
 const cellsX: u32 = ${clusterCountWidth}u;
 const cellsY: u32 = ${clusterCountHeight}u;
 const cellsZ: u32 = ${clusterCountDepth}u;
-const maxLights: u32 = 128u;
+const maxLights: u32 = 512u;
 
 // distance from the camera to the front of this depth layer
 // layer 0 is near, the last wall is far
