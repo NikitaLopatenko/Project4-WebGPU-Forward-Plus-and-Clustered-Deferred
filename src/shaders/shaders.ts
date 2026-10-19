@@ -41,7 +41,10 @@ export const constants = {
 // =================================
 
 function evalShaderRaw(raw: string) {
-    return eval('`' + raw.replaceAll('${', '${constants.') + '`');
+    // name lookup, so the build keeps lightRadius instead of turning it into undefined
+    return raw.replace(/\$\{(\w+)\}/g, (_, name: string) => {
+        return String(constants[name as keyof typeof constants]);
+    });
 }
 
 const commonSrc: string = evalShaderRaw(commonRaw);
